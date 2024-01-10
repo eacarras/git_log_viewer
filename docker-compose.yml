@@ -1,0 +1,18 @@
+version: '1'
+
+services:
+  log-viewer-back:
+    build: ./log-viewer-back
+    container_name: log-viewer-back
+    environment:
+      - ENV=development
+    ports:
+      - 5000:5000
+
+  log-viewer-front:
+    build: ./log-viewer-front
+    container_name: log-viewer-front
+    ports:
+      - 3000:80
+    links:
+      - log-viewer-back
