@@ -1,21 +1,32 @@
 
-import express, { Express, Request, Response , Application } from 'express'
-import bodyParser from 'body-parser'
-import dotenv from 'dotenv'
+const cors = require('cors')
+const dotenv = require('dotenv')
+const express = require('express')
+const bodyParser = require('body-parser')
 
+const routes = require('./router')
+const middleware = require('./middleware')
 
 
 //For env File 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5500;
 
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-// Endpoints
+// Use cors
+app.use(cors())
+app.use(middleware.setHeaders)
 
+// Endpoints
+app.get('/health', (req,res)=>{
+    res.send('API is running without any problem')
+})
+
+app.use('/github_api', routes)
 
 // Upload server
 try {

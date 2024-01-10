@@ -7,7 +7,7 @@ services:
     environment:
       - ENV=development
     ports:
-      - 5000:5000
+      - 5500:5500
 
   log-viewer-front:
     build: ./log-viewer-front

@@ -3,6 +3,6 @@ WORKDIR /app
 COPY . .
 RUN npm install
 
-EXPOSE 5000
+EXPOSE 5500
 
 ENTRYPOINT ["node", "index.js"]
