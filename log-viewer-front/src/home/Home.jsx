@@ -3,18 +3,31 @@ const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1 className="text-3xl font-bold ">Git Log Viewer App</h1>
       </header>
+      
+      <aside>
+        {/* Section of inputs */}
+        <div>
+          <div>
+            <p>Owner</p>
+            <input type="text" />
+          </div>
+
+          <div>
+            <p>Repository name</p>
+            <input type="text" />
+          </div>
+
+          <div>
+            <p>Token (if apply)</p>
+            <input type="text" />
+          </div>
+        </div>
+
+        {/* Viewer logs */}
+        <div>Viewer log</div>
+      </aside>
     </div>
   );
 }
