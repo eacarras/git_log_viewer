@@ -14,9 +14,6 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5500;
 
-const jsonParser = bodyParser.json()
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
-
 // Use cors
 app.use(cors())
 app.use(middleware.setHeaders)
