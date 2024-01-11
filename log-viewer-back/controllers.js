@@ -40,11 +40,12 @@ const getLogs = async function (req, res) {
 
               return res.status(200).json({ data: cleanedData })
             } catch (e) {
-              return res.status(500).json({ err: e })
+                console.log(e)
+                return res.status(500).json({ err: e })
             }
         })
     }).on('error', (e) => {
-        console.log(e);
+        console.log(e)
         res.status(500).send(constants.error_message);
     })
 }

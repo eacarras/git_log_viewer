@@ -43,7 +43,16 @@ const Home = () => {
         <h3 className='text-xl font-bold mt-16 mb-6'>Viewer log</h3>
         <div className='flex flex-col gap-5'>
           {data.map((e, idx) => (
-            <div key={`idx-${idx}-${e.commit.message}`}>{e.commit.message}</div>
+            <aside className='border border-black rounded-lg p-4' key={`idx-${idx}-${e.commit.message}`}>
+              {/* Body of cards */}
+              <div className='flex flex-col gap-2'>
+                <a className='font-bold' href={e.link}>{e.commit.message}</a>
+                <div className='flex flex-row gap-2'>
+                  <img className='rounded-full w-6 h-6' alt={`avatar-user-${idx}-${e.commit.message}`} src={e.author.avatar} />
+                  <span>{e.author.user}</span>
+                </div>
+              </div>
+            </aside>
           ))}
         </div>
       </aside>

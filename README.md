@@ -33,7 +33,11 @@ It can supports for the moment just HTTP REST method like GET.
 This app is also put in Docker container and its definition can be found
 in a file *log-viewer-back/Dockerfile*. 
 
-
+You need to add .env file with the following variables
+```
+PORT=5500
+GITHUB_ACCESS_TOKEN=
+```
 
 #### log-viewer-front (Frontend)
 
@@ -41,3 +45,7 @@ This is a real endpoint for a user where they can view the git log information
 of some repositories
 
 It can be entered using link: **http://localhost:3000/**
+
+```
+REACT_APP_API_URL=http://localhost:5500/ # in the case you not change the port
+```
