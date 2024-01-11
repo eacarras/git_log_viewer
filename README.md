@@ -60,8 +60,18 @@ REACT_APP_API_URL=http://localhost:5500/ # in the case you not change the port
 
 #### TODO-LIST
 - Add loading in the frontend
+    We can add a lib for this or create a component
 - Improve alert showed
+    We can add a lib for implement a toast and after that used instead of alert
 - Add classes and models in the backend
+    Create classes in the backend and services to encapsulate, e.x create services of Github that connect and have an option of call a endpoint
 - Improves test to have more coverage
+    Add test in back using jest and mock-data, also in front end for unit components modularizing the component of card to see the render also, consider the main page with the basic information to be showed like the inputs, button and labels
 - Improve docker compose to stay in development mode
+    The docker-compose actually just make a build and keep upload the data, we need to run the server and run all it
 - Add default endpoint in backend to avoid not have any response
+    Add in the index and endpoint that get all the responses using app.get('*', function(req, res){ /** Code here */})
+- Add backend test with mock data for response api
+    Use a property lib for create mock data and use it in the tests
+- Improve pipeline to be able to run test and run both builds
+    Add three more stages where in one run the test of backend, another one for the frontend and another for build the backend

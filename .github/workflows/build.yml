@@ -18,8 +18,4 @@ jobs:
       with:
         node-version: '16.x'
     - name: Move to front
-      run: cd log-viewer-front
-    - name: Install dependencies 
-      run: npm install
-    - name: Run tests
-      run: npm run build test
+      run: cd log-viewer-front && npm install && npm run build
