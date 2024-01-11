@@ -24,8 +24,8 @@ const getLogs = async function (req, res) {
 
         // Process final data
         response.on('end', () => {
+            const parsedData = JSON.parse(rawData)
             try {
-              const parsedData = JSON.parse(rawData)
               const cleanedData = parsedData.map((e) => ({
                 commit: {
                     message: e.commit.message,
@@ -41,7 +41,7 @@ const getLogs = async function (req, res) {
               return res.status(200).json({ data: cleanedData })
             } catch (e) {
                 console.log(e)
-                return res.status(500).json({ err: e })
+                return res.status(503).json({ err: parsedData.message || e.message })
             }
         })
     }).on('error', (e) => {
