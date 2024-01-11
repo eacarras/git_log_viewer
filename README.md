@@ -75,3 +75,4 @@ REACT_APP_API_URL=http://localhost:5500/ # in the case you not change the port
     Use a property lib for create mock data and use it in the tests
 - Improve pipeline to be able to run test and run both builds
     Add three more stages where in one run the test of backend, another one for the frontend and another for build the backend
+- Improve api folder and move request to backend of him

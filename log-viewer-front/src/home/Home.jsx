@@ -5,7 +5,7 @@ const Home = () => {
   const [owner, setOwner] = useState("eacarras")
   const [repository, setRepository] = useState("git_log_viewer")
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [, setIsLoading] = useState(false)
   const [data, setData] = useState([])
 
   // Custom function
