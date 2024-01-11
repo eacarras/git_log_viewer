@@ -9,7 +9,16 @@ In order to run this application you need to install two tools: **Docker** & **D
 
 ### How to run it?
 
-The entire application can be run with a single command on a terminal:
+The most efficient way if you are in develop mode is open two tabs in the terminal:
+```
+$ cd log-viewer-back
+$ npm run dev
+
+$ cd log-viewer-front
+$ npm run start
+```
+
+Other option: The entire application can be run with a single command on a terminal:
 
 ```
 $ docker-compose up -d
@@ -21,8 +30,7 @@ If you want to stop it, use the following command:
 $ docker-compose down
 ```
 
----
-
+Open localhost:3000 and see the response, don't forget the .env (review the readme of each want to know what you need to add)!
 
 #### log-viewer-back (REST API)
 
@@ -49,3 +57,11 @@ It can be entered using link: **http://localhost:3000/**
 ```
 REACT_APP_API_URL=http://localhost:5500/ # in the case you not change the port
 ```
+
+#### TODO-LIST
+- Add loading in the frontend
+- Improve alert showed
+- Add classes and models in the backend
+- Improves test to have more coverage
+- Improve docker compose to stay in development mode
+- Add default endpoint in backend to avoid not have any response
