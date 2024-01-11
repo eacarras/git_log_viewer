@@ -26,6 +26,7 @@ const Home = () => {
   }
 
   // Hooks
+  // eslint-disable-next-line
   useEffect(search, [])
 
   return (
